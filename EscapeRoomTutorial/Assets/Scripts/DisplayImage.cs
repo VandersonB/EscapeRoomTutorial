@@ -2,13 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class DisplayImage : MonoBehaviour
 {
 
-    /*variável que irá monitorar o valor e trocar de telas*/
-    public int CurrentWall 
+
+    private int currentWall;
+    private int previousWall;
+
+    public enum State
     {
-        get { return CurrentWall; }
+        normal, zoom, changeView
+    };
+
+    public State CurrentState { get; set; }
+    public int CurrentWall /*variável que irá monitorar o valor e trocar de telas*/
+    {
+        get { return currentWall; }
         set    
         {
             if(value == 5)
@@ -24,8 +33,6 @@ public class NewBehaviourScript : MonoBehaviour
         } 
     }
 
-    private int currentWall;
-    private int previousWall;
 
     // Start is called before the first frame update
     void Start()
@@ -34,10 +41,15 @@ public class NewBehaviourScript : MonoBehaviour
         currentWall = 1;
     }
 
-    // Update is called once per frame
+    // Update faz com que, frame a frame, o GO DisplayImage atualize qual é a tela que deve ser carregada
     void Update()
     {
-        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Wall" + currentWall.ToString());
+        if (currentWall!=previousWall)
+        {
+            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Wall" + currentWall.ToString());
+        }
+
+        previousWall = currentWall;
     }
 
 }
