@@ -67,9 +67,15 @@
     <Compile Include="Assets\Scripts\ButtonHandler.cs" />
     <Compile Include="Assets\Scripts\ChangeView.cs" />
     <Compile Include="Assets\Scripts\DisplayImage.cs" />
+    <Compile Include="Assets\Scripts\Drawer.cs" />
     <Compile Include="Assets\Scripts\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Interact.cs" />
+    <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\ObjectsManage.cs" />
+    <Compile Include="Assets\Scripts\PickUpItem.cs" />
+    <Compile Include="Assets\Scripts\Puzzle.cs" />
+    <Compile Include="Assets\Scripts\PuzzlePiece.cs" />
+    <Compile Include="Assets\Scripts\Slot.cs" />
     <Compile Include="Assets\Scripts\UIDisplayer.cs" />
     <Compile Include="Assets\Scripts\ZoomInObject.cs" />
     <Reference Include="Unity.Timeline.Editor">
@@ -93,14 +99,14 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/Projetos/Unity/Tutoriais/EscapeRoom/EscapeRoomTutorial/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>D:/Projetos/Unity/Tutoriais/EscapeRoom/EscapeRoomTutorial/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/Projetos/Unity/Tutoriais/EscapeRoom/EscapeRoomTutorial/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Projetos/Unity/Tutoriais/EscapeRoom/EscapeRoomTutorial/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>D:/Projetos/Unity/Tutoriais/EscapeRoom/EscapeRoomTutorial/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
