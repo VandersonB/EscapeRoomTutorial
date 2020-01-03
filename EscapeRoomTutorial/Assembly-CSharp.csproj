@@ -63,18 +63,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Blocks.cs" />
     <Compile Include="Assets\Scripts\ButtonBehavior.cs" />
     <Compile Include="Assets\Scripts\ButtonHandler.cs" />
     <Compile Include="Assets\Scripts\ChangeView.cs" />
+    <Compile Include="Assets\Scripts\Chess.cs" />
     <Compile Include="Assets\Scripts\DisplayImage.cs" />
     <Compile Include="Assets\Scripts\Drawer.cs" />
+    <Compile Include="Assets\Scripts\DynamicObjects.cs" />
+    <Compile Include="Assets\Scripts\DynamicObjectsEditor.cs" />
+    <Compile Include="Assets\Scripts\ExitDoor.cs" />
     <Compile Include="Assets\Scripts\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Interact.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\LockNumber.cs" />
+    <Compile Include="Assets\Scripts\NumberLock.cs" />
     <Compile Include="Assets\Scripts\ObjectsManage.cs" />
     <Compile Include="Assets\Scripts\PickUpItem.cs" />
     <Compile Include="Assets\Scripts\Puzzle.cs" />
     <Compile Include="Assets\Scripts\PuzzlePiece.cs" />
+    <Compile Include="Assets\Scripts\Scale.cs" />
     <Compile Include="Assets\Scripts\Slot.cs" />
     <Compile Include="Assets\Scripts\UIDisplayer.cs" />
     <Compile Include="Assets\Scripts\ZoomInObject.cs" />

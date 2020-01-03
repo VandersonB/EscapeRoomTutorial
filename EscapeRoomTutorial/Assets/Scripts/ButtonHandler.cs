@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonHandler : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class ButtonHandler : MonoBehaviour
     
     private float initialCameraSize;
     private Vector3 initialCameraPosition;
+
+    private ZoomInObject[] zoomInObjects;
     
     // Start is called before the first frame update
     void Start()
@@ -18,6 +21,8 @@ public class ButtonHandler : MonoBehaviour
         currentDisplay = GameObject.Find("displayImage").GetComponent<DisplayImage>();
         initialCameraPosition = Camera.main.transform.position;
         initialCameraSize = Camera.main.orthographicSize;
+
+        zoomInObjects = FindObjectsOfType<ZoomInObject>();
     }
 
 
@@ -49,7 +54,22 @@ public class ButtonHandler : MonoBehaviour
         {
             GameObject.Find("displayImage").GetComponent<DisplayImage>().CurrentState = DisplayImage.State.normal;
             currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/wall" + currentDisplay.CurrentWall);
+            foreach (var zoomInObject in zoomInObjects)
+            {
+                zoomInObject.gameObject.layer = 0;
+            }
         }
     
     }
+
+    public void OnClickPLay()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    public void OnClickQuit()
+    {
+        Application.Quit();
+    }
+
 }

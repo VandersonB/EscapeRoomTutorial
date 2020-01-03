@@ -25,7 +25,7 @@ public class Interact : MonoBehaviour
             if(hit && hit.transform.tag == "Interactable")
             {
                 hit.transform.GetComponent<IInteractable>().Interact(currentDisplay);
-                Debug.Log("Hit em um interactable");
+                //Debug.Log("Hit em um interactable");
             }
         }
     }
