@@ -43,13 +43,13 @@ public class Inventory : MonoBehaviour
 
     public void SelectSlot()
     {
-        Debug.Log("Entrou");
+      
         foreach(Transform slot in slots.transform)
         {
             if(slot.gameObject == currentSelectedSlot && slot.GetComponent<Slot>().ItemProperty == Slot.property.usable)
             {
                 slot.GetComponent<Image>().color = new Color(0.9f, 0.4f, 0.6f, 1);
-                Debug.Log("destaque de cor");
+               
             }
             else if (slot.gameObject == currentSelectedSlot && slot.GetComponent<Slot>().ItemProperty == Slot.property.displayable)
             {
@@ -68,7 +68,7 @@ public class Inventory : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
             itemDisplayer.SetActive(false);
-            Debug.Log("Executou");
+         
             foreach(Transform slot in slots.transform)
             {
                 if (slot.gameObject == currentSelectedSlot && slot.GetComponent<Slot>().ItemProperty == Slot.property.displayable)

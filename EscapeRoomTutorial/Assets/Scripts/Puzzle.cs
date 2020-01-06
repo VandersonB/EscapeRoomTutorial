@@ -30,7 +30,7 @@ public class Puzzle : MonoBehaviour
             var claimItem = Instantiate(ClaimItem, GameObject.Find("piece8").transform, false);
             claimItem.transform.localScale = new Vector3(15, 15, 15);
             itemSpawn = true;
-           Debug.Log("Completed") ;
+         
         }
         HideDisplay();
     }
@@ -54,7 +54,7 @@ public class Puzzle : MonoBehaviour
         if (IsCompleted) return true;
         {
             IsCompleted = true;
-            Debug.Log("finish");
+          
         }
        
 
@@ -66,7 +66,7 @@ public class Puzzle : MonoBehaviour
         int.Parse(puzzlePiece.gameObject.GetComponent<Image>().sprite.name.ToString().Substring(puzzlePiece.gameObject.GetComponent<Image>().sprite.name.Length - 1))))
             {
                 IsCompleted = false;
-                Debug.Log("Keep Triyng");
+             
             }
         }
 

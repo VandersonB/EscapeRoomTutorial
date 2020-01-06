@@ -25,7 +25,7 @@ public class ChangeView : MonoBehaviour, IInteractable
 
         Camera.main.orthographicSize = initialCameraSize;
         Camera.main.transform.position = initialCameraPosition;
-        Debug.Log("Resetou a camera");
+
     }
 }
 

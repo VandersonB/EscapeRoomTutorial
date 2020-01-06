@@ -11,7 +11,7 @@ public class ZoomInObject : MonoBehaviour, IInteractable
     {
         Camera.main.orthographicSize *= ZoomRatio;
         Camera.main.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, Camera.main.transform.position.z);
-        Debug.Log("Zoom executado");
+  
 
         currentDisplay.CurrentState = DisplayImage.State.zoom;
         gameObject.layer = 2;

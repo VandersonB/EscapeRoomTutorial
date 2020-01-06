@@ -46,9 +46,10 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
     public void Combine()
     {
-        if (Inventory.GetComponent<Inventory>().previousSelectedSlot.GetComponent<Slot>().combinationItem == this.gameObject.GetComponent<Slot>().combinationItem && this.gameObject.GetComponent<Slot>().combinationItem!="")
+     
+        if (Inventory.GetComponent<Inventory>().previousSelectedSlot.GetComponent<Slot>().combinationItem == this.gameObject.GetComponent<Slot>().combinationItem && this.gameObject.GetComponent<Slot>().name!= Inventory.GetComponent<Inventory>().previousSelectedSlot.GetComponent<Slot>().name)
         {
-            Debug.Log("Combinar");
+        
             GameObject combinedItem = Instantiate(Resources.Load<GameObject>("Combined Items/" + combinationItem));
             combinedItem.GetComponent<PickUpItem>().ItemPickUp();
             Inventory.GetComponent<Inventory>().previousSelectedSlot.GetComponent<Slot>().ClearSlot();
@@ -61,7 +62,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
     public void ClearSlot()
     {
-        Debug.Log("limpou o slot");
+   
         ItemProperty = Slot.property.empty;
         displayImage = "";
         combinationItem = "";

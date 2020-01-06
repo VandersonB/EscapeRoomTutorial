@@ -20,7 +20,7 @@ public class Interact : MonoBehaviour
             //após o jogador clicar na tela, é preciso capturar a sua posição
             Vector2 rayPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(rayPosition, Vector2.zero, 1);
-            Debug.Log("Botão pressionado"+hit);
+            
             //em seguida, executa uma ação se o click for sobre um objeto que é possível interagir no cenário.
             if(hit && hit.transform.tag == "Interactable")
             {
